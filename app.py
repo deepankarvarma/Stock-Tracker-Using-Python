@@ -30,7 +30,8 @@ st.markdown(f"<h3>Visualization for {ticker_input}</h3>",unsafe_allow_html=True)
 stock_data = get_stock_data(ticker_input)
 
 # Display the stock data in a line chart
-st.line_chart(stock_data['Close'])
+chart_data = {'data': stock_data['Close'], 'name': 'Closing Price'}
+st.line_chart(chart_data, use_container_width=True)
 
 # Display the stock data in a table
 st.write(stock_data)
