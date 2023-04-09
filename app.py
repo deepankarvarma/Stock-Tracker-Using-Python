@@ -33,10 +33,6 @@ stock_data = get_stock_data(ticker_input)
 chart_data = {'data': stock_data['Close'], 'name': 'Closing Price'}
 st.line_chart(chart_data, use_container_width=True)
 
-# Add labels to the chart
-st.write(f"**Latest {ticker_input} closing price:** {stock_data['Close'][-1]:,.2f}")
-st.write(f"**Highest {ticker_input} closing price:** {stock_data['Close'].max():,.2f}")
-st.write(f"**Lowest {ticker_input} closing price:** {stock_data['Close'].min():,.2f}")
 
 # Display the stock data in a table
 st.write(stock_data)
