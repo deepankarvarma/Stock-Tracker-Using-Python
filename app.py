@@ -25,7 +25,7 @@ def get_stock_data(ticker):
 
 # Create a text input for the user to enter a stock ticker
 ticker_input = st.sidebar.text_input('Enter a stock ticker (e.g. AAPL,INTC)', 'AAPL')
-st.markdown(f"<h3>Ticker for {ticker_input}</h3>",unsafe_allow_html=True)
+st.markdown(f"<h3>Visualization for {ticker_input}</h3>",unsafe_allow_html=True)
 # Get the stock data for the entered ticker
 stock_data = get_stock_data(ticker_input)
 
